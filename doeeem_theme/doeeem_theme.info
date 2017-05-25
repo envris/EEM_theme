@@ -1,0 +1,28 @@
+screenshot  = screenshot.png
+name        = DoE EEM Theme
+description = The Essential Environmental Measures theme, based on GOV.AU UI-Kit.
+core        = 7.x
+
+stylesheets[all][] = vendor/owl-carousel/owl.carousel.css
+stylesheets[all][] = vendor/owl-carousel/owl.transitions.css
+stylesheets[all][] = dist/css/styles.css
+
+scripts[] = vendor/owl-carousel/owl.carousel.min.js
+scripts[] = vendor/object-fit-images/ofi.browser.js
+scripts[] = dist/js/script.js
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = Sidebar
+regions[sidebar_second] = Above Footer
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+settings[doeeem_theme_header_title] = govCMS
+settings[doeeem_theme_override_image_styles] = 1
