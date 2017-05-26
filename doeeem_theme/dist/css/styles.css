@@ -7356,6 +7356,7 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 .region-navigation .block-superfish ul.sf-menu > li {
   display: table-cell;
   float: none;
+  height: 100%;
 }
 
 .region-navigation .block-superfish ul.sf-menu > li.menuparent > a:after {
@@ -7375,14 +7376,13 @@ html:not(.no-js) .region-navigation .block-superfish ul.sf-menu:not(.superfish-p
 }
 
 .region-navigation .block-superfish ul.sf-menu > li > a {
-  display: inline-block;
+  display: block;
   padding-top: 1.375rem;
   padding-bottom: 1.125rem;
   box-sizing: content-box;
   width: 100%;
   height: 100%;
   color: white;
-  vertical-align: top;
   text-align: center;
   text-decoration: none;
   font-weight: 600;
