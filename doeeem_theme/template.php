@@ -223,3 +223,25 @@ function doeeem_theme_preprocess_search_result(&$variables) {
   // Remove the author / date from the result display (404 page).
   $variables['info'] = '';
 }
+
+function doeeem_theme_preprocess_superfish_menu_item(&$vars) {
+  $element = &$vars['element'];
+  // Add children to the Essential Environmental Measures link.
+  if ($element['item']['link']['link_path'] == "node/6") {
+    // Get theme terms.
+    $voc = taxonomy_vocabulary_machine_name_load('theme');
+    $terms = taxonomy_get_tree($voc->vid, 0, NULL, TRUE);
+
+    // Create the submenu markup.
+    $sub_menu = '';
+    foreach ($terms as $term) {
+      $sub_menu .= '<li>' . l($term->name, 'taxonomy/term/' . $term->tid) . "</li>\n";
+    }
+    $element['below'] = $sub_menu;
+
+    // Add Superfish submenu classes.
+    $children_count = count($terms);
+    $classes = $element['attributes']['class'];
+    $element['attributes']['class'] = str_replace('sf-no-children', "sf-total-children-$children_count sf-parent-children-0 sf-single-children-$children_count menuparent", $classes);
+  }
+}
