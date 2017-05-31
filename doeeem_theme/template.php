@@ -224,24 +224,50 @@ function doeeem_theme_preprocess_search_result(&$variables) {
   $variables['info'] = '';
 }
 
+/**
+ * Generate the markup for the themes submenu.
+ *
+ * @return array
+ *  The markup and a count of the number of themes found.
+ */
+function _doeeem_theme_measures_submenu_markup() {
+  // Get theme terms.
+  $voc = taxonomy_vocabulary_machine_name_load('theme');
+  $terms = taxonomy_get_tree($voc->vid, 0, NULL, TRUE);
+
+  // Create the submenu markup.
+  $sub_menu = '';
+  foreach ($terms as $term) {
+    $sub_menu .= '<li>' . l($term->name, 'taxonomy/term/' . $term->tid) . "</li>\n";
+  }
+  return [$sub_menu, count($terms)];
+}
+
+/**
+ * Implements theme_preprocess_menu_block_wrapper().
+ */
+function doeeem_theme_preprocess_menu_block_wrapper(&$vars) {
+  // Add children to the Essential Environmental Measures link in the footer.
+  if ($vars['delta'] == "govcms_menu_block-footer") {
+    $parent_menu = &$vars['content'][903];
+    list($sub_menu, ) = _doeeem_theme_measures_submenu_markup();
+    $parent_menu['#below'] = [
+      '#markup' => '<ul class="menu">' . $sub_menu . '</ul>'
+    ];
+  }
+}
+
+/**
+ * Implements theme_preprocess_superfish_menu_item().
+ */
 function doeeem_theme_preprocess_superfish_menu_item(&$vars) {
   $element = &$vars['element'];
-  // Add children to the Essential Environmental Measures link.
+  // Add children to the Essential Environmental Measures link in main menu.
   if ($element['item']['link']['link_path'] == "node/6") {
-    // Get theme terms.
-    $voc = taxonomy_vocabulary_machine_name_load('theme');
-    $terms = taxonomy_get_tree($voc->vid, 0, NULL, TRUE);
-
-    // Create the submenu markup.
-    $sub_menu = '';
-    foreach ($terms as $term) {
-      $sub_menu .= '<li>' . l($term->name, 'taxonomy/term/' . $term->tid) . "</li>\n";
-    }
+    list($sub_menu, $theme_count) = _doeeem_theme_measures_submenu_markup();
     $element['below'] = $sub_menu;
-
     // Add Superfish submenu classes.
-    $children_count = count($terms);
     $classes = $element['attributes']['class'];
-    $element['attributes']['class'] = str_replace('sf-no-children', "sf-total-children-$children_count sf-parent-children-0 sf-single-children-$children_count menuparent", $classes);
+    $element['attributes']['class'] = str_replace('sf-no-children', "sf-total-children-$theme_count sf-parent-children-0 sf-single-children-$theme_count menuparent", $classes);
   }
 }
