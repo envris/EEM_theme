@@ -62,15 +62,13 @@ html {
   @include breakpoint(large_tablet) {
     flex-wrap: nowrap;
   }
-}
-
-.sidebar-first {
-  order: -1;
-  width: 100%;
-  @include breakpoint(large_tablet) {
-    width: rem(330px);
-    min-width: rem(330px);
-    padding-right: rem(60px);
+  >.sidebar-first {
+    width: 100%;
+    @include breakpoint(large_tablet) {
+      width: rem(330px);
+      min-width: rem(330px);
+      padding-left: rem(60px);
+    }
   }
 }
 
@@ -87,10 +85,10 @@ html {
     }
   }
   &.no-sidebar {
-    .page-node & {
+    .page-node &, .page-taxonomy-term & {
       .region-content {
         // Node Pages
-        .node {
+        .node, .taxonomy-term.vocabulary-theme {
           &>.submitted {
             @include center-column($desktop_content_column);
           }

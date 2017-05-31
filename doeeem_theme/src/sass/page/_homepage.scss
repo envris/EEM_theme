@@ -122,7 +122,7 @@
       padding-bottom: 0;
     }
     h3 {
-      @include link-colours(white, $neutral_4, $neutral_1);
+      color: transparent;
       margin-top: 0;
       font-weight: 400;
       @include breakpoint(tablet) {
@@ -139,7 +139,6 @@
     @include breakpoint(tablet) {
       position: relative;
       box-sizing: border-box;
-      background-color: #0B3B46;
       padding: rem(45px);
       padding-top: rem(85px);
       max-width: rem(524px);
@@ -215,7 +214,7 @@
 // =========================================================
 // HOMEPAGE BLOGS AND NEWS LISTSING
 // =========================================================
-.view-home-page-blog-articles, .view-latest-news {
+.view-home-page-blog-articles, .view-latest-news, .view-themes.view-display-id-homepage_block, .view-events.view-display-id-block_2 {
   .view-content {
     @include breakpoint(tablet) {
       @include outer-container(100%);

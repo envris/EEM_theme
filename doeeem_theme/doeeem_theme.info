@@ -24,5 +24,5 @@ regions[bottom]         = Page bottom
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 
-settings[doeeem_theme_header_title] = govCMS
+settings[doeeem_theme_header_title] = Essential Environmental Measures
 settings[doeeem_theme_override_image_styles] = 1

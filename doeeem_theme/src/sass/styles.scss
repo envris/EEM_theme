@@ -5,6 +5,7 @@
 @import '../../vendor/gov-au-ui-kit/assets/sass/vendor';
 @import '../../vendor/gov-au-ui-kit/assets/sass/components';
 // govCMS UI Kit.
+@import "colours";
 @import 'variables';
 @import 'mixins';
 @import 'page/header';
@@ -17,11 +18,9 @@
 @import 'page/homepage';
 @import 'page/listings';
 @import 'page/sidebar_navigation';
-@import 'page/block_twitter';
 @import 'page/block_quick_links';
 @import 'page/block_footer_teaser';
 @import 'page/block_footer_submenu';
-@import 'page/block_social_links';
 @import 'page/search';
 @import 'page/news_media_landing';
 @import 'page/contact_form';

@@ -81,3 +81,16 @@ body.not-front #content {
     }
   }
 }
+
+.content-body .content .view-themes {
+  .views-field-field-theme-image a {
+    border: none;
+    &:focus, &:hover {
+      background: none;
+    }
+  }
+  .views-field-name {
+    margin-top: rem(7px);
+    margin-bottom: rem(17px);
+  }
+}
