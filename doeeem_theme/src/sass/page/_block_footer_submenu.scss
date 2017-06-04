@@ -1,5 +1,5 @@
 #block-menu-menu-footer-sub-menu {
-  border-top: 1px solid darken($primary_1, 10%);
+  border-top: 1px solid darken($secondary_1, 10%);
   .content {
     @include breakpoint(tablet) {
       padding-top: rem(38px);

@@ -85,7 +85,7 @@ html {
     }
   }
   &.no-sidebar {
-    .page-node &, .page-taxonomy-term & {
+    .page-node:not(.node-type-data) &, .page-taxonomy-term & {
       .region-content {
         // Node Pages
         .node, .taxonomy-term.vocabulary-theme {
@@ -102,6 +102,16 @@ html {
           }
           &>.content {
             max-width: $form_width;
+          }
+        }
+      }
+    }
+    .page-file &, .page-node.node-type-data & {
+      .region-content {
+        // File pages, Data Node Pages
+        .content>.file, .content>.node {
+          &>.content {
+            @include center-column($desktop_content_column);
           }
         }
       }

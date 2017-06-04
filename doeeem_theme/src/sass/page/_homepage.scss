@@ -214,7 +214,7 @@
 // =========================================================
 // HOMEPAGE BLOGS AND NEWS LISTSING
 // =========================================================
-.view-home-page-blog-articles, .view-latest-news, .view-themes.view-display-id-homepage_block, .view-events.view-display-id-block_2 {
+.view-latest-news, .view-themes.view-display-id-homepage_block, .view-events.view-display-id-block_2 {
   .view-content {
     @include breakpoint(tablet) {
       @include outer-container(100%);
@@ -263,6 +263,28 @@
       .field-name-body {
         @include listing-component-body;
       }
+    }
+  }
+  &.view-themes.view-display-id-homepage_block {
+    .views-row {
+      @include listing-component-wrapper;
+      &.has-thumbnail {
+        padding-top: $listing_component_image_height;
+        .views-field-field-theme-image {
+          @include listing-component-image;
+        }
+        h3 {
+          margin-top: rem(30px);
+        }
+      }
+    }
+    h3 {
+      @include listing-component-heading;
+      margin-top: 0;
+      font-weight: normal;
+    }
+    .views-field-description {
+      @include listing-component-body;
     }
   }
 }

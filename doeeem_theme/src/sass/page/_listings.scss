@@ -32,6 +32,16 @@ body.not-front #content {
         }
       }
     }
+    .region-sidebar-first .view-measures.view-display-id-by_theme, .region-sidebar-first .view-subthemes.view-display-id-by_theme {
+      .view-content {
+        margin-top: 1em;
+      }
+      .views-row {
+        display: block;
+        width: 100%;
+        margin-bottom: .75em;
+      }
+    }
   }
   .view {
     .view-content {

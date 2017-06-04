@@ -271,3 +271,18 @@ function doeeem_theme_preprocess_superfish_menu_item(&$vars) {
     $element['attributes']['class'] = str_replace('sf-no-children', "sf-total-children-$theme_count sf-parent-children-0 sf-single-children-$theme_count menuparent", $classes);
   }
 }
+
+/**
+ * Implements theme_preprocess_views_view_unformatted().
+ */
+function doeeem_theme_preprocess_views_view_unformatted(&$vars) {
+  /** @var view $view */
+  $view = $vars['view'];
+  if ($view->name == "themes" && $view->current_display == "homepage_block") {
+    foreach ($view->result as $index => $row) {
+      if (!empty($row->field_field_theme_image)) {
+        $vars['classes_array'][$index] .= ' has-thumbnail';
+      }
+    }
+  }
+}
