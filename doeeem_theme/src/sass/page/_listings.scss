@@ -6,6 +6,10 @@ body.not-front #content {
   .no-sidebar {
     .view {
       @include center-column($desktop_column);
+      &.view-panel-experts {
+        @include center-column($desktop_content_column);
+        margin-bottom: 3em;
+      }
     }
     .views-row {
       @include breakpoint(tablet) {
@@ -14,6 +18,24 @@ body.not-front #content {
       &:nth-child(3n) {
         @include breakpoint(tablet) {
           @include omega();
+        }
+      }
+    }
+    .view-panel-experts .views-row {
+      float: none;
+      width: 100%;
+      margin-top: 2em;
+      .views-field-field-panel-expert-image {
+        float: right;
+        margin-left: 1.5em;
+      }
+      .views-field-field-panel-expert-date {
+        margin-top: 1em;
+        .views-label {
+          font-weight: bold;
+        }
+        .field-content {
+          display: inline-block;
         }
       }
     }
