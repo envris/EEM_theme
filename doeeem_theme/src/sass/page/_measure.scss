@@ -1,0 +1,39 @@
+.page-node.node-type-measure {
+  .node {
+    h2.field-label {
+      font-size: rem(32px);
+      margin-top: 1.5em;
+      margin-bottom: .5em;
+    }
+    .paragraphs-items-field-author {
+      >.field-name-field-author>.field-items {
+        >.field-item {
+          .field-name-field-author-ref, .field-name-field-organisation {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          .field-name-field-author-ref {
+            font-weight: bold;
+            .field-name-field-display-name {
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+          }
+          .field-name-field-author-ref+.field-name-field-organisation {
+            &:before {
+              content: ',';
+              display: inline-block;
+              vertical-align: top;
+              margin-right: 5px;
+            }
+            >.field-items {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

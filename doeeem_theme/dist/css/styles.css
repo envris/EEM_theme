@@ -10059,23 +10059,6 @@ body.not-front #content .view .pager {
   margin-bottom: 1.0625rem;
 }
 
-.paragraphs-items-field-author > .field-name-field-author > .field-items {
-  padding-left: 3em;
-}
-
-.paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item {
-  display: list-item;
-}
-
-.paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-author-ref {
-  margin-bottom: 0;
-  font-weight: bold;
-}
-
-.paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-organisation {
-  margin-top: 0;
-}
-
 .region-sidebar-first .block {
   margin-bottom: 1.375rem;
 }
@@ -10881,5 +10864,38 @@ body.not-front #content .view .pager {
   max-width: 33.75rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.page-node.node-type-measure .node h2.field-label, .page-node.node-type-measure .node .field-label.display {
+  font-size: 2rem;
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+}
+
+.page-node.node-type-measure .node .paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-author-ref, .page-node.node-type-measure .node .paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-organisation {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page-node.node-type-measure .node .paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-author-ref {
+  font-weight: bold;
+}
+
+.page-node.node-type-measure .node .paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-author-ref .field-name-field-display-name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page-node.node-type-measure .node .paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-author-ref + .field-name-field-organisation:before {
+  content: ',';
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.page-node.node-type-measure .node .paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-author-ref + .field-name-field-organisation > .field-items {
+  display: inline-block;
 }
 /*# sourceMappingURL=styles.css.map */

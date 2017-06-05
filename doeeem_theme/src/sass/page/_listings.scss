@@ -104,19 +104,3 @@ body.not-front #content {
     margin-bottom: rem(17px);
   }
 }
-
-.paragraphs-items-field-author {
-  >.field-name-field-author>.field-items {
-    padding-left: 3em;
-    >.field-item {
-      display: list-item;
-      .field-name-field-author-ref {
-        margin-bottom: 0;
-        font-weight: bold;
-      }
-      .field-name-field-organisation {
-        margin-top: 0;
-      }
-    }
-  }
-}

@@ -74,6 +74,12 @@ function doeeem_theme_preprocess_field(&$variables) {
       }
     }
   }
+
+  // Add a theme suggestion for Measure content type full view.
+  $element = $variables['element'];
+  if ($element['#bundle'] == "measure" && $element['#view_mode'] == "full") {
+    $variables['theme_hook_suggestions'][] = "field__measure__full";
+  }
 }
 
 /**
@@ -283,6 +289,18 @@ function doeeem_theme_preprocess_views_view_unformatted(&$vars) {
       if (!empty($row->field_field_theme_image)) {
         $vars['classes_array'][$index] .= ' has-thumbnail';
       }
+    }
+  }
+}
+
+function doeeem_theme_preprocess_entity(&$vars) {
+  // Add an H3 tag around Definitions for Measures.
+  if (!empty($vars['paragraphs_item'])) {
+    /** @var ParagraphsItemEntity $item */
+    $item = $vars['paragraphs_item'];
+    if ($item->field_name === "field_definition") {
+      $markup = $vars['content']['field_title'][0]['#markup'];
+      $vars['content']['field_title'][0]['#markup'] = '<h3>' . $markup . '</h3>';
     }
   }
 }
