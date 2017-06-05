@@ -51,7 +51,7 @@ html {
     margin-bottom: $default_padding;
   }
   .content {
-    @include link-colours($primary_1, $secondary_3, $neutral_1);
+    @include link-colours($secondary_3, $neutral_1, $primary_1);
   }
 }
 

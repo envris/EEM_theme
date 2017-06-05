@@ -128,7 +128,7 @@
 @mixin listing-component-heading() {
   font-size: rem(24px);
   line-height: 1.5em;
-  @include link-colours($secondary_1, $secondary_3, $neutral_1);
+  @include link-colours($secondary_1, $secondary_3, #eee);
 }
 
 @mixin listing-component-subtext() {
