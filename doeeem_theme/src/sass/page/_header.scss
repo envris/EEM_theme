@@ -24,12 +24,22 @@
       align-items: center;
       justify-content: space-between;
     }
+    @include breakpoint(large_tablet) {
+      margin-top: 3em;
+    }
     .logo-wrapper {
-      display: flex;
-      align-items: center;
+      @include breakpoint(large_tablet) {
+        position: relative;
+      }
       a {
         display: inline-block;
         vertical-align: middle;
+        max-width: 300px;
+        margin-bottom: 1em;
+        @include breakpoint(large_tablet) {
+          position: absolute;
+          bottom: 189%;
+        }
         img {
           float: left;
           max-height: rem(50px);
@@ -43,10 +53,9 @@
         margin-right: auto;
         font-size: rem(18px);
         line-height: 1em;
-        color: $primary_1;
+        color: $secondary_1;
         font-weight: 400;
         @include breakpoint(tablet) {
-          margin-left: $default_padding;
           padding-left: 0;
           display: inline-block;
           vertical-align: middle;

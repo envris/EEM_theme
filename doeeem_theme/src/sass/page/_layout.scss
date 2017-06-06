@@ -27,7 +27,7 @@ html {
       .content-header-inner {
         @include center-column($desktop_column);
         h1 {
-          color: white;
+          color: beige;
           font-weight: 300;
           font-size: rem(32px);
           @include breakpoint(tablet) {
