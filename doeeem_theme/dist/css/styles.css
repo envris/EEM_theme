@@ -10967,4 +10967,32 @@ body.not-front #content .view .pager {
 .page-node.node-type-measure .node .paragraphs-items-field-author > .field-name-field-author > .field-items > .field-item .field-name-field-author-ref + .field-name-field-organisation > .field-items {
   display: inline-block;
 }
+
+@media print {
+  a[href]::after {
+    display: none;
+  }
+  .breadcrumbs--inverted {
+    display: none;
+  }
+  .breadcrumbs--inverted ul li {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .breadcrumbs--inverted ul li:not(:last-child):after {
+    content: '/';
+    margin-left: 1em;
+  }
+  #block-menu-block-govcms-menu-block-footer {
+    display: none;
+  }
+  #block-menu-menu-footer-sub-menu .content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #block-menu-menu-footer-sub-menu .menu {
+    display: none;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

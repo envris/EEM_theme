@@ -1,0 +1,31 @@
+@media print {
+  a[href]::after {
+    display: none;
+  }
+  .breadcrumbs--inverted {
+    display: none;
+    ul {
+      li {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        &:not(:last-child):after {
+          content: '/';
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+  #block-menu-block-govcms-menu-block-footer {
+    display: none;
+  }
+  #block-menu-menu-footer-sub-menu {
+    .content {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .menu {
+      display: none;
+    }
+  }
+}
