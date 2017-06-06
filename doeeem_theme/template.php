@@ -244,7 +244,9 @@ function _doeeem_theme_measures_submenu_markup() {
   // Create the submenu markup.
   $sub_menu = '';
   foreach ($terms as $term) {
-    $sub_menu .= '<li>' . l($term->name, 'taxonomy/term/' . $term->tid) . "</li>\n";
+    if (!empty($term->field_theme_status) && $term->field_theme_status['und'][0]['value'] === "1") {
+      $sub_menu .= '<li>' . l($term->name, 'taxonomy/term/' . $term->tid) . "</li>\n";
+    }
   }
   return [$sub_menu, count($terms)];
 }

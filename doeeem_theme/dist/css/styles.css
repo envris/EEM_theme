@@ -6874,6 +6874,31 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   border: none;
 }
 
+h3 {
+  font-size: 1.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.875rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
 .header__inner {
   max-width: 73.125rem;
   margin-left: auto;
