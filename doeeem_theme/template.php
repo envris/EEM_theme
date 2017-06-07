@@ -301,8 +301,10 @@ function doeeem_theme_preprocess_entity(&$vars) {
     /** @var ParagraphsItemEntity $item */
     $item = $vars['paragraphs_item'];
     if ($item->field_name === "field_definition") {
-      $markup = $vars['content']['field_title'][0]['#markup'];
-      $vars['content']['field_title'][0]['#markup'] = '<h3>' . $markup . '</h3>';
+      if (!empty($vars['content']['field_title'])) {
+        $markup = $vars['content']['field_title'][0]['#markup'];
+        $vars['content']['field_title'][0]['#markup'] = '<h3>' . $markup . '</h3>';
+      }
     }
   }
 }

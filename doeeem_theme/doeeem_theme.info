@@ -9,6 +9,7 @@ stylesheets[all][] = dist/css/styles.css
 
 scripts[] = vendor/owl-carousel/owl.carousel.min.js
 scripts[] = vendor/object-fit-images/ofi.browser.js
+scripts[] = vendor/jquery-ui/jquery-ui-1.12.1.accordion.min.js
 scripts[] = dist/js/script.js
 
 regions[header]         = Header

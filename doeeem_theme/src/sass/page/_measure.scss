@@ -35,5 +35,35 @@
         }
       }
     }
+    >.content>.field-name-body {
+      >h2 {
+        position: relative;
+        padding-left: .75em;
+        &:hover {
+          cursor: pointer;
+        }
+        &:focus {
+          outline: none;
+        }
+        &:before {
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 100px;
+          height: 100px;
+          content: '';
+          background-image: url(../images/svg/accordion_right_arrow.svg);
+          background-repeat: no-repeat;
+          background-size: 13%;
+        }
+        &.ui-accordion-header-active {
+          &:before {
+            top: 15px;
+            background-image: url(../images/svg/accordion_down_arrow.svg);
+            background-size: 18%;
+          }
+        }
+      }
+    }
   }
 }

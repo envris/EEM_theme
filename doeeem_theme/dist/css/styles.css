@@ -10968,6 +10968,37 @@ body.not-front #content .view .pager {
   display: inline-block;
 }
 
+.page-node.node-type-measure .node > .content > .field-name-body > h2, .page-node.node-type-measure .node > .content > .field-name-body > .display {
+  position: relative;
+  padding-left: .75em;
+}
+
+.page-node.node-type-measure .node > .content > .field-name-body > h2:hover, .page-node.node-type-measure .node > .content > .field-name-body > .display:hover {
+  cursor: pointer;
+}
+
+.page-node.node-type-measure .node > .content > .field-name-body > h2:focus, .page-node.node-type-measure .node > .content > .field-name-body > .display:focus {
+  outline: none;
+}
+
+.page-node.node-type-measure .node > .content > .field-name-body > h2:before, .page-node.node-type-measure .node > .content > .field-name-body > .display:before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  content: '';
+  background-image: url(../images/svg/accordion_right_arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 13%;
+}
+
+.page-node.node-type-measure .node > .content > .field-name-body > h2.ui-accordion-header-active:before, .page-node.node-type-measure .node > .content > .field-name-body > .ui-accordion-header-active.display:before {
+  top: 15px;
+  background-image: url(../images/svg/accordion_down_arrow.svg);
+  background-size: 18%;
+}
+
 @media print {
   a[href]::after {
     display: none;
