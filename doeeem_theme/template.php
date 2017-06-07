@@ -69,7 +69,7 @@ function doeeem_theme_preprocess_field(&$variables) {
     }
     // Define custom image style for views.
     elseif ($variables['element']['#field_name'] === 'field_image') {
-      if ($variables['items'][0]['#image_style'] === 'medium') {
+      if (!empty($variables['items'][0]['#image_style']) && $variables['items'][0]['#image_style'] === 'medium') {
         $variables['items'][0]['#image_style'] = 'doeeem_theme_thumbnail';
       }
     }

@@ -185,6 +185,14 @@ ul, ol, dl, p, dt, dd {
 
 .field-name-body {
   @include wysiwyg;
+  .media .file-image .field-name-field-caption {
+    font-size: 80%;
+  }
+}
+
+.node-page .field-name-field-image .file-image .field-name-field-caption {
+  font-size: 80%;
+  margin-top: 0;
 }
 
 a[rel~='external']::after {
