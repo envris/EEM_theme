@@ -1,0 +1,12 @@
+name = DoE EEM Admin theme
+description = EEM sub theme of Shiny for Admin
+core = 7.x
+base theme = shiny
+
+regions[content] = Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = First sidebar
+regions[footer] = Footer
+regions_hidden[] = sidebar_first
