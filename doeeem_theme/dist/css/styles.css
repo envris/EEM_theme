@@ -10190,6 +10190,60 @@ body.not-front #content .view .pager {
   box-sizing: content-box;
 }
 
+.menu-block-wrapper.menu-block-1 {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+.menu-block-wrapper.menu-block-1 ul {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-block-wrapper.menu-block-1 ul li {
+  list-style: none;
+  margin: 0;
+}
+
+.menu-block-wrapper.menu-block-1 ul li::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.menu-block-wrapper.menu-block-1 ul li .image {
+  float: left;
+  margin-right: 2em;
+  margin-bottom: 4em;
+}
+
+.menu-block-wrapper.menu-block-1 ul li .image img, .menu-block-wrapper.menu-block-1 ul li .image .image-placeholder {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 218px;
+  height: 130px;
+  font-family: "object-fit:cover";
+  object-fit: cover;
+}
+
+.menu-block-wrapper.menu-block-1 ul li .image .image-placeholder {
+  background: #2e5a6a;
+}
+
+.menu-block-wrapper.menu-block-1 ul li h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.menu-block-wrapper.menu-block-1 ul li .summary * {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+}
+
 .region-sidebar-first .block {
   margin-bottom: 1.375rem;
 }

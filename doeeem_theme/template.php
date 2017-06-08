@@ -281,6 +281,58 @@ function doeeem_theme_preprocess_superfish_menu_item(&$vars) {
 }
 
 /**
+ * Defines the menu link theme for submenu links of the 'About the Program' page.
+ */
+function doeeem_theme_menu_link__menu_block__1(&$vars) {
+  $element = $vars['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
+
+  // Get the node being referenced.
+  $href_arr = explode('/', $element['#href']);
+  if (count($href_arr) == 2 && $href_arr[0] == "node") {
+    $nid = $href_arr[1];
+    $node = node_load($nid);
+
+    // Get the summary.
+    $summary = '<div class="summary">';
+    if (!empty($node->body[LANGUAGE_NONE][0]['safe_summary'])) {
+      $summary .= $node->body[LANGUAGE_NONE][0]['safe_summary'];
+    }
+    elseif (!empty($node->body)) {
+      $summary .= text_summary($node->body[LANGUAGE_NONE][0]['safe_value'], $node->body[LANGUAGE_NONE][0]['format'], 300);
+    }
+    $summary .= '</div>';
+
+      // Get the image.
+    $image_markup = '<div class="image">';
+    if (!empty($node->field_image)) {
+      $image_markup .= theme_image_style([
+        'style_name' => 'theme_tile',
+        'path' => $node->field_image['und'][0]['uri'],
+        'width' => '',
+        'height' => '',
+        'alt' => $node->field_image['und'][0]['alt'],
+        'title' => $node->field_image['und'][0]['title']
+      ]);
+    }
+    else {
+      $image_markup .= '<div class="image-placeholder"></div>';
+    }
+    $image_markup .= '</div>';
+
+    $output = $image_markup . $output;
+    $output = $output . $summary;
+  }
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/**
  * Implements theme_preprocess_views_view_unformatted().
  */
 function doeeem_theme_preprocess_views_view_unformatted(&$vars) {

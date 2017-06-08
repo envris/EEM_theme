@@ -161,3 +161,39 @@ body.not-front #content {
 #block-views-themes-landing-page>h2 {
   @include center-column($desktop_content_column);
 }
+
+.menu-block-wrapper.menu-block-1 {
+  @include center-column($desktop_content_column);
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      @include clearfix();
+      list-style: none;
+      margin: 0;
+      .image {
+        float: left;
+        margin-right: 2em;
+        margin-bottom: 4em;
+        img, .image-placeholder {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          width: 218px;
+          height: 130px;
+          object-fit: cover;
+        }
+        .image-placeholder {
+          background: $secondary_1;
+        }
+      }
+      h3 {
+        font-size: rem(20px);
+        margin-top: 0;
+      }
+      .summary * {
+        font-size: rem(15px);
+        line-height: rem(22px);
+      }
+    }
+  }
+}
