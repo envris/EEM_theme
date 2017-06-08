@@ -9034,12 +9034,6 @@ ul.tabs.primary {
   }
 }
 
-@media (min-width: 1200px) {
-  .bean-basic-content > .content {
-    text-align: center;
-  }
-}
-
 .bean-basic-content > .content p {
   margin-bottom: 0;
 }
@@ -9938,11 +9932,11 @@ body.not-front #content .has-sidebar .view {
   }
 }
 
-body.not-front #content .has-sidebar .region-sidebar-first .view-measures.view-display-id-by_theme .view-content, body.not-front #content .has-sidebar .region-sidebar-first .view-subthemes.view-display-id-by_theme .view-content {
+body.not-front #content .has-sidebar .region-sidebar-first .view-measures.view-display-id-by_theme .view-content, body.not-front #content .has-sidebar .region-sidebar-first .view-subthemes.view-display-id-by_theme .view-content, body.not-front #content .has-sidebar .view-events.view-display-id-theme_related .view-content {
   margin-top: 1em;
 }
 
-body.not-front #content .has-sidebar .region-sidebar-first .view-measures.view-display-id-by_theme .views-row, body.not-front #content .has-sidebar .region-sidebar-first .view-subthemes.view-display-id-by_theme .views-row {
+body.not-front #content .has-sidebar .region-sidebar-first .view-measures.view-display-id-by_theme .views-row, body.not-front #content .has-sidebar .region-sidebar-first .view-subthemes.view-display-id-by_theme .views-row, body.not-front #content .has-sidebar .view-events.view-display-id-theme_related .views-row {
   display: block;
   width: 100%;
   margin-bottom: .75em;
