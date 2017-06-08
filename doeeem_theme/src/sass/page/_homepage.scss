@@ -30,7 +30,7 @@
   background-color: $neutral_4;
   &>.content {
     @include center-column($desktop_column);
-    @include link-colours($primary_1, $secondary_3, $neutral_1);
+    @include link-colours($secondary_3, $primary_1, $neutral_1);
     padding-top: $default_padding;
     padding-bottom: $default_padding;
     color: $neutral_1;
