@@ -10,6 +10,9 @@ body.not-front #content {
         @include center-column($desktop_content_column);
         margin-bottom: 3em;
       }
+      &.view-id-themes.view-display-id-landing_page {
+        @include center-column($desktop_content_column);
+      }
     }
     .views-row {
       @include breakpoint(tablet) {
@@ -37,6 +40,34 @@ body.not-front #content {
         .field-content {
           display: inline-block;
         }
+      }
+    }
+    .view-id-themes.view-display-id-landing_page .views-row {
+      float: none;
+      margin: 0;
+      width: 100%;
+      .views-field-field-theme-image {
+        float: left;
+        margin-right: 2em;
+        margin-bottom: 4em;
+        img {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          width: 218px;
+          height: 130px;
+          object-fit: cover;
+        }
+      }
+      .views-field-name {
+        font-size: rem(20px);
+        margin-top: 0;
+      }
+      .views-field-description p {
+        font-size: rem(15px);
+        line-height: rem(22px);
+      }
+      .views-field-nothing {
+        font-size: rem(14px);
       }
     }
   }
@@ -125,4 +156,8 @@ body.not-front #content {
     margin-top: rem(7px);
     margin-bottom: rem(17px);
   }
+}
+
+#block-views-themes-landing-page>h2 {
+  @include center-column($desktop_content_column);
 }

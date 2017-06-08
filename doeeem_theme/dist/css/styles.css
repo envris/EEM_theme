@@ -9831,6 +9831,15 @@ body.not-front #content .no-sidebar .view.view-panel-experts {
   margin-bottom: 3em;
 }
 
+body.not-front #content .no-sidebar .view.view-id-themes.view-display-id-landing_page {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
 @media (min-width: 768px) {
   body.not-front #content .no-sidebar .views-row {
     float: left;
@@ -9870,6 +9879,41 @@ body.not-front #content .no-sidebar .view-panel-experts .views-row .views-field-
 
 body.not-front #content .no-sidebar .view-panel-experts .views-row .views-field-field-panel-expert-date .field-content {
   display: inline-block;
+}
+
+body.not-front #content .no-sidebar .view-id-themes.view-display-id-landing_page .views-row {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+body.not-front #content .no-sidebar .view-id-themes.view-display-id-landing_page .views-row .views-field-field-theme-image {
+  float: left;
+  margin-right: 2em;
+  margin-bottom: 4em;
+}
+
+body.not-front #content .no-sidebar .view-id-themes.view-display-id-landing_page .views-row .views-field-field-theme-image img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 218px;
+  height: 130px;
+  font-family: "object-fit:cover";
+  object-fit: cover;
+}
+
+body.not-front #content .no-sidebar .view-id-themes.view-display-id-landing_page .views-row .views-field-name {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+body.not-front #content .no-sidebar .view-id-themes.view-display-id-landing_page .views-row .views-field-description p {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+}
+
+body.not-front #content .no-sidebar .view-id-themes.view-display-id-landing_page .views-row .views-field-nothing {
+  font-size: 0.875rem;
 }
 
 body.not-front #content .has-sidebar .view {
@@ -10135,6 +10179,15 @@ body.not-front #content .view .pager {
 .content-body .content .view-themes .views-field-name {
   margin-top: 0.4375rem;
   margin-bottom: 1.0625rem;
+}
+
+#block-views-themes-landing-page > h2, #block-views-themes-landing-page > .display {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
 }
 
 .region-sidebar-first .block {
