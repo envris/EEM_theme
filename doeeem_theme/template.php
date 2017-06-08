@@ -172,6 +172,13 @@ function doeeem_theme_preprocess_node(&$variables) {
     // Hide submitted date on webforms.
     $variables['display_submitted'] = FALSE;
   }
+
+  if ($variables['type'] == "data") {
+    // Display raw markup for the embed code.
+    if (!empty($variables['content']['field_embed_code'])) {
+      $variables['content']['field_embed_code'][0]['#markup'] = $variables['content']['field_embed_code']['#items'][0]['value'];
+    }
+  }
 }
 
 /**
