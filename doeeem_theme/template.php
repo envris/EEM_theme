@@ -288,7 +288,7 @@ function doeeem_theme_preprocess_superfish_menu_item(&$vars) {
 }
 
 /**
- * Defines the menu link theme for submenu links of the 'About the Program' page.
+ * Defines the menu link theme for Landing Page submenu links.
  */
 function doeeem_theme_menu_link__menu_block__1(&$vars) {
   $element = $vars['element'];
