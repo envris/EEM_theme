@@ -5,36 +5,6 @@
       margin-top: 1.5em;
       margin-bottom: .5em;
     }
-    .paragraphs-items-field-author {
-      >.field-name-field-author>.field-items {
-        >.field-item {
-          .field-name-field-author-ref, .field-name-field-organisation {
-            display: inline-block;
-            vertical-align: top;
-            margin-top: 0;
-            margin-bottom: 0;
-          }
-          .field-name-field-author-ref {
-            font-weight: bold;
-            .field-name-field-display-name {
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-          }
-          .field-name-field-author-ref+.field-name-field-organisation {
-            &:before {
-              content: ',';
-              display: inline-block;
-              vertical-align: top;
-              margin-right: 5px;
-            }
-            >.field-items {
-              display: inline-block;
-            }
-          }
-        }
-      }
-    }
     >.content>.field-name-body {
       >h2 {
         position: relative;
@@ -63,6 +33,50 @@
             background-size: 18%;
           }
         }
+      }
+    }
+  }
+  #content .has-sidebar .region-sidebar-first {
+    .view {
+      .views-row {
+        width: 100%;
+      }
+      .views-field {
+        margin-bottom: rem(24px);
+        >h2 {
+          @include block-heading;
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .views-field-field-author>.field-content>.item-list {
+      ul {
+        >li {
+          margin: 0;
+          list-style: none;
+        }
+      }
+    }
+    .paragraphs-item-author-with-organisation {
+      margin-bottom: rem(25px);
+      .field-name-field-author-ref, .field-name-field-organisation {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .field-name-field-author-ref {
+        font-weight: bold;
+        .node-author {
+          margin: 0;
+          padding: 0;
+        }
+        .field-name-field-display-name {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+      .field-name-field-organisation {
+        line-height: rem(20px);
       }
     }
   }
