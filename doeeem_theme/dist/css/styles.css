@@ -8177,8 +8177,22 @@ body.not-front #content .content-header .content-header-inner h1, body.not-front
   line-height: 2.25rem;
 }
 
+.field-name-body .media.media-wysiwyg-align-right, .field-name-body .media.media-wysiwyg-align-left {
+  max-width: 50%;
+}
+
+.field-name-body .media.media-wysiwyg-align-right .field-name-field-caption, .field-name-body .media.media-wysiwyg-align-left .field-name-field-caption {
+  width: 80%;
+  margin: auto;
+}
+
+.field-name-body .media .file-image > .content {
+  text-align: center;
+}
+
 .field-name-body .media .file-image .field-name-field-caption {
   font-size: 80%;
+  margin-top: 0;
 }
 
 .node-page .field-name-field-image .file-image .field-name-field-caption {
