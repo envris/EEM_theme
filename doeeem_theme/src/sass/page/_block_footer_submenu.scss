@@ -33,6 +33,14 @@
       @include breakpoint(tablet) {
         order: 1;
       }
+      a {
+        color: white;
+      }
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
     }
   }
 }

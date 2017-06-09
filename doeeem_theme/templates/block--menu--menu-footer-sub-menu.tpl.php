@@ -58,7 +58,7 @@
       <?php if (theme_get_setting('doeeem_theme_footer_copyright')): ?>
         <?php print decode_entities(theme_get_setting('doeeem_theme_footer_copyright')); ?>
       <?php else: ?>
-        &copy; <?php print date('Y'); ?>. <?php print variable_get('site_name', 'Home'); ?>. All rights reserved.
+        &copy; <a href="/copyright">Commonwealth of Australia<img alt="Creative Commons License" src="<?php print '/' . drupal_get_path('theme', 'doeeem_theme') . '/src/images/ccby.png' ?>" /></a>
       <?php endif; ?>
       </div>
   </div>

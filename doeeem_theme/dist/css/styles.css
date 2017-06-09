@@ -10900,6 +10900,16 @@ body.not-front #content .view .pager {
   }
 }
 
+#block-menu-menu-footer-sub-menu .content .footer-copyright a {
+  color: white;
+}
+
+#block-menu-menu-footer-sub-menu .content .footer-copyright img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
 #content .search-form {
   max-width: 64rem;
   margin-left: auto;
